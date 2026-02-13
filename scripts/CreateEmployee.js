@@ -51,16 +51,16 @@ employeeFormEle.addEventListener("submit", async (e) => {
     headers : {
       "content-Type" : "application/json",
     },
-    body : JSON.stringify(newEmployeeData),               // <---- SEND emp data in JSON- format
+    body: JSON.stringify(newEmployeeData),               // <---- SEND emp data in JSON- format
   });
 
 console.log(resp);
 
 // NAVIGATION
-Window.Location.href = "AllEmployee.html"
+window.location.href = "AllEmployees.html"
 
   } catch(err){
-    console.log(err);
+    // console.log(err);
     alert("Something went wrong❌")
   }
 
