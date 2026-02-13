@@ -1,0 +1,55 @@
+{
+  "employees": [
+    {
+      "id": "f657",
+      "firstname": "Surbhi",
+      "middlename": "",
+      "lastname": "Rawat",
+      "dob": "0022-12-12",
+      "email": "shurbhirawat43@gmail.com",
+      "maritalStatus": "married",
+      "phoneNo": "23456789",
+      "address": {
+        "street": "Ground Floor, KK Complex",
+        "city": "Sultanpur",
+        "state": "Uttar Pradesh",
+        "country": "India",
+        "zipcode": "228001"
+      }
+    },
+    {
+      "id": "2281",
+      "firstname": "Aditya",
+      "middlename": "",
+      "lastname": "Singh",
+      "dob": "2003-07-27",
+      "email": "aadi@gmail.com",
+      "maritalStatus": "married",
+      "phoneNo": "3445678996",
+      "address": {
+        "street": "sultanpur",
+        "city": "Sultanpur",
+        "state": "Uttar Pradesh",
+        "country": "India",
+        "zipcode": "228001"
+      }
+    },
+    {
+      "id": "5eae",
+      "firstname": "Surbhi",
+      "middlename": "",
+      "lastname": "Rawat",
+      "dob": "2004-09-05",
+      "email": "shurbhirawat43@gmail.com",
+      "maritalStatus": "single",
+      "phoneNo": "3445678996",
+      "address": {
+        "street": "Ground Floor, KK Complex",
+        "city": "Sultanpur",
+        "state": "Uttar Pradesh",
+        "country": "India",
+        "zipcode": "228001"
+      }
+    }
+  ]
+}
