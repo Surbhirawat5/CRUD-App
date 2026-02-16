@@ -86,7 +86,7 @@ employeeFormEle.addEventListener("submit", async (e) => {
     console.log(resp); 
   } catch (err) {
     console.log(err);
-  }
+  } m
 });
 
 

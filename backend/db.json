@@ -1,50 +1,16 @@
 {
   "employees": [
     {
-      "firstname": "Surbhi",
-      "middlename": "",
-      "lastname": "Rawat",
-      "dob": "2004-09-05",
-      "email": "shurbhirawat43@gmail.com",
-      "maritalStatus": "single",
-      "phoneNo": "3445678996",
-      "address": {
-        "street": "Ground Floor, KK Complex",
-        "city": "Sultanpur",
-        "state": "Uttar Pradesh",
-        "country": "India",
-        "zipcode": "228001"
-      },
-      "id": "5eae"
-    },
-    {
-      "id": "e2d1",
+      "id": "e435",
       "firstname": "Surbhi",
       "middlename": "",
       "lastname": "Rawat",
       "dob": "2004-05-09",
       "email": "shurbhirawat43@gmail.com",
       "maritalStatus": "single",
-      "phoneNo": "3445678996",
-      "address": {
-        "street": "Ground Floor, KK Complex",
-        "city": "Sultanpur",
-        "state": "Uttar Pradesh",
-        "country": "India",
-        "zipcode": "228001"
-      }
-    },
-    {
-      "id": "9976",
-      "firstname": "Shailendra",
-      "middlename": "",
-      "lastname": "Rawat",
-      "dob": "0122-12-12",
-      "email": "shurbhirawat43@gmail.com",
-      "maritalStatus": "single",
       "phoneNo": "1234567890",
       "address": {
-        "street": "500/lucknow naka, Sultanpur",
+        "street": "Ground Floor, KK Complex",
         "city": "Sultanpur",
         "state": "Uttar Pradesh",
         "country": "India",
@@ -52,16 +18,16 @@
       }
     },
     {
-      "id": "72fa",
-      "firstname": "Surbhi",
+      "id": "dccf",
+      "firstname": "Aditya",
       "middlename": "",
-      "lastname": "Rawat",
-      "dob": "2222-05-09",
-      "email": "shurbhirawat43@gmail.com",
-      "maritalStatus": "single",
-      "phoneNo": "3445678996",
+      "lastname": "Singh",
+      "dob": "2009-02-07",
+      "email": "aaasingh1010@gmail.com",
+      "maritalStatus": "married",
+      "phoneNo": "234567890",
       "address": {
-        "street": "Ground Floor, KK Complex",
+        "street": "500/lucknow naka, Sultanpur",
         "city": "Sultanpur",
         "state": "Uttar Pradesh",
         "country": "India",
