@@ -1,9 +1,6 @@
 // npx json-server backend/db.json --watch --port=6600    ---> for running on terminal
 
 const employeeFormEle = document.getElementById("employee-form");
-
-// console.log(employeeFormEle);
-
 const firstNameEle = document.getElementById("firstname");
 const middleNameEle = document.getElementById("middlename");
 const lastNameEle = document.getElementById("lastname");
@@ -24,6 +21,7 @@ employeeFormEle.addEventListener("submit", async (e) => {
   console.log("Form Submitted");
 
 
+ // CREATE NEW UPDATED EMP OBJECT 
 
   let newEmployeeData = {
     firstname : firstNameEle.value.trim(),

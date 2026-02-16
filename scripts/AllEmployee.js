@@ -56,6 +56,39 @@ function displayEmployees(allEmployees){
                 <button class="btn delete-btn" data-id="${emp.id}">Delete</button>
             </footer>
         `;
+
+        const deleteBtn = empCard.querySelector(".delete-btn");
+        deleteBtn.addEventListener("click", () => {
+            handleDelete(emp.id);
+        });
+
+        const editBtn = empCard.querySelector(".edit-btn");
+        editBtn.addEventListener("click", ()=> {
+            handleEdit(emp.id);
+        });
+
         employeesContainerEle.append(empCard)
     });
 }
+
+
+async function handleDelete(id){
+    console.log(id); 
+
+    try {
+        let resp = await fetch(`http://localhost:5000/employees/${id}`,{
+            method: "DELETE",
+        });
+        console.log(resp);    
+    } catch (error){
+        console.log(error);
+        alert("unable to delete ❌")
+    }
+}
+
+
+async function handleEdit(id){
+   
+    window.location.href = `EditEmployee.html?id=${id}`;
+}
+    
