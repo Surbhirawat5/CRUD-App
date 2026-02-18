@@ -19,7 +19,7 @@ const params = new URLSearchParams(window.location.search);
 
 async function getEditEmployee(){
    try {
-    let resp = await fetch(`http://localhost:5000/employees/${id}`);
+    let resp = await fetch(`https://crud-app-e478.onrender.com/${id}`);
     let data = await resp.json();
     console.log(data);
 
@@ -76,7 +76,7 @@ employeeFormEle.addEventListener("submit", async (e) => {
   };
 
   try{
-    let resp = await fetch(`http://localhost:5000/employees/${id}`, {
+    let resp = await fetch(`https://crud-app-e478.onrender.com/${id}`, {
         method: "PUT",
         headers: {
             "Content-Type": "application/json",   
@@ -86,7 +86,7 @@ employeeFormEle.addEventListener("submit", async (e) => {
     console.log(resp); 
   } catch (err) {
     console.log(err);
-  } m
+  } 
 });
 
 
