@@ -1,30 +1,28 @@
-const employeesContainerEle = document.getElementById("employees-container")
+const employeesContainerEle = document.getElementById("employees-container");
 
 async function getAllEmployee() {
- try{
+  try {
     let resp = await fetch(`https://crud-app-e478.onrender.com/employees`);
     let data = await resp.json();
-    console.log(data);                //{{}, {}, {}}
-    displayEmployees(data); 
-}catch(err){
+    console.log(data); //{{}, {}, {}}
+    displayEmployees(data);
+  } catch (err) {
     console.log(err);
     alert("Something went wrong❌");
   }
 }
 
 // CALLS FUNCTION AFTER DOM TREE CREATION
-window.addEventListener("DOMContentLoaded",()=>{
-    getAllEmployee();
+window.addEventListener("DOMContentLoaded", () => {
+  getAllEmployee();
 });
 
+function displayEmployees(allEmployees) {
+  allEmployees.map((emp) => {
+    const empCard = document.createElement("article");
+    empCard.className = "emp-card";
 
-function displayEmployees(allEmployees){
-
-    allEmployees.map((emp) => {
-        const empCard = document.createElement("article")
-        empCard.className = "emp-card";
-
-        empCard.innerHTML = `
+    empCard.innerHTML = `
             <header class="emp-header">
 
             <h3 class="emp-name">
@@ -35,12 +33,12 @@ function displayEmployees(allEmployees){
 
             <section class="emp-info">
             <p><strong>Date of Birth:</strong> ${emp.dob}</p>
-            <p><strong>Marital Status:</strong> ${emp.maritalstatus}</p>
+            <p><strong>Marital Status:</strong> ${emp.maritalStatus}</p>
             </section>
 
             <section class="emp-contact">
             <p><strong>Email:</strong> ${emp.email}</p>
-            <p><strong>Phone:</strong> ${emp.phoneno}</p>
+            <p><strong>Phone:</strong> ${emp.phoneNo}</p>
             </section>
 
             <section class = "emp-address>
@@ -57,38 +55,40 @@ function displayEmployees(allEmployees){
             </footer>
         `;
 
-        const deleteBtn = empCard.querySelector(".delete-btn");
-        deleteBtn.addEventListener("click", () => {
-            handleDelete(emp.id);
-        });
-
-        const editBtn = empCard.querySelector(".edit-btn");
-        editBtn.addEventListener("click", ()=> {
-            handleEdit(emp.id);
-        });
-
-        employeesContainerEle.append(empCard)
+    const deleteBtn = empCard.querySelector(".delete-btn");
+    deleteBtn.addEventListener("click", () => {
+      handleDelete(emp.id);
     });
+
+    const editBtn = empCard.querySelector(".edit-btn");
+    editBtn.addEventListener("click", () => {
+      handleEdit(emp.id);
+    });
+
+    employeesContainerEle.append(empCard);
+  });
 }
 
+async function handleDelete(id) {
+  console.log(id);
 
-async function handleDelete(id){
-    console.log(id); 
-
-    try {
-        let resp = await fetch(`https://crud-app-e478.onrender.com/employees/${id}`,{
-            method: "DELETE",
-        });
-        console.log(resp);    
-    } catch (error){
-        console.log(error);
-        alert("unable to delete ❌")
+  try {
+    let resp = await fetch(
+      `https://crud-app-e478.onrender.com/employees/${id}`,
+      {
+        method: "DELETE",
+      },
+    );
+    console.log(resp);
+    if (resp.ok) {
+      window.location.reload();
     }
+  } catch (error) {
+    console.log(error);
+    alert("unable to delete ❌");
+  }
 }
 
-
-async function handleEdit(id){
-   
-    window.location.href = `EditEmployee.html?id=${id}`;
+async function handleEdit(id) {
+  window.location.href = `EditEmployee.html?id=${id}`;
 }
-    
